@@ -124,7 +124,7 @@
             
             <div class="polaroid">
                 <img src="IMG_0708.jpeg" alt="Mama">
-                <div class="caption">Mama yang paling sabar ❤️</div>
+                <div class="caption">Mama harus terus sehat dan bahagia. Kami semua sayang mama dalam kondisi apapun.</div>
             </div>
 
             <div class="polaroid">
@@ -134,24 +134,24 @@
 
             <div class="polaroid">
                 <img src="IMG_0710.jpeg" alt="Mama">
-                <div class="caption">Sehat selalu ya, Ma...</div>
+                <div class="caption">Sehat selalu ya, Ma.... pokoknya harus terus ada sampai aku tuaaa</div>
             </div>
 
             <div class="polaroid">
-                <img src="https://images.unsplash.com/photo-1492691523567-6170c8175363?q=80&w=500" alt="Mama">
-                <div class="caption">Harta paling berharga</div>
+                <img src="IMG_0712.jpeg" alt="Mama">
+                <div class="caption">Terima kasih maa.., mama selalu ada buatku meski kadangkala diriku membuat amarah tongkat dewa😔</div>
             </div>
 
         </div>
     </div>
 
     <section class="personal-note">
-        "Ibu adalah degup jantung di dalam rumah, dan tanpa dia, tidak ada detak jantung." <br>
-        <strong>- Aku menyayangimu, Ma!</strong>
+        "mama adalah degup jantung di dalam rumah, dan tanpa mama, tidak ada detak jantung." <br>
+        <strong>- I love you mom. kalau mama berdoa selalu namaku disebut, aku juga ma sellau menyebut mama dalam doa.</strong>
     </section>
 
     <footer>
-        &copy; 2024 - Dibuat spesial untuk Hari Ibu
+        &copy; 2025 - Dibuat spesial untuk Hari Ibu
     </footer>
 
 </body>
