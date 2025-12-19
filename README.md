@@ -1,13 +1,13 @@
 # Mother-s-day
 
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selamat Hari Ibu, Mama!</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
     <style>
-        /* CSS DALAM SATU FILE */
         :root {
             --pink-soft: #ffafbd;
             --pink-warm: #ffc3a0;
@@ -23,6 +23,41 @@
             overflow-x: hidden;
         }
 
+        /* --- LAYER 1: OVERLAY PEMBUKA --- */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--pink-soft), var(--pink-warm));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 1s ease, visibility 1s;
+            color: white;
+            text-align: center;
+        }
+
+        .heart-btn {
+            font-size: 80px;
+            cursor: pointer;
+            animation: pulse 1.5s infinite;
+            background: none;
+            border: none;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* --- LAYER 2: ISI KONTEN --- */
         header {
             text-align: center;
             padding: 80px 20px;
@@ -38,17 +73,19 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
-        header p {
-            font-size: 1.2rem;
-            font-weight: 300;
-            margin-top: 10px;
-        }
-
-        /* Container Album */
         .album-wrapper {
             max-width: 1100px;
             margin: -50px auto 50px auto;
             padding: 20px;
+            opacity: 0; /* Awalnya sembunyi */
+            transform: translateY(30px);
+            transition: all 1.5s ease;
+        }
+
+        /* Munculkan konten saat overlay hilang */
+        .show-content {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
         }
 
         .grid-album {
@@ -57,26 +94,23 @@
             gap: 25px;
         }
 
-        /* Kartu Foto Ala Polaroid */
         .polaroid {
             background: white;
             padding: 15px 15px 30px 15px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.08);
             border-radius: 2px;
             transition: transform 0.4s ease;
-            position: relative;
         }
 
         .polaroid:hover {
             transform: translateY(-10px) rotate(2deg);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
 
         .polaroid img {
             width: 100%;
             height: 300px;
             object-fit: cover;
-            filter: sepia(10%); /* Memberikan kesan vintage hangat */
+            filter: sepia(10%);
         }
 
         .caption {
@@ -87,7 +121,6 @@
             color: #d88a8a;
         }
 
-        /* Pesan Penutup */
         .personal-note {
             text-align: center;
             max-width: 600px;
@@ -104,27 +137,26 @@
             font-size: 0.8rem;
             background: #fdf2f4;
         }
-
-        /* Responsive Mobile */
-        @media (max-width: 600px) {
-            header h1 { font-size: 2.5rem; }
-            .album-wrapper { margin-top: 20px; }
-        }
     </style>
 </head>
 <body>
+
+    <div id="overlay">
+        <button class="heart-btn" onclick="bukaKado()">❤️</button>
+        <h2>Ada kejutan buat Mama...<br><small>(Klik hatinya ya, Ma)</small></h2>
+    </div>
 
     <header>
         <h1>Happy Mother's Day</h1>
         <p>Terima kasih telah menjadi pelangi di setiap hariku, Ma.</p>
     </header>
 
-    <div class="album-wrapper">
+    <div class="album-wrapper" id="albumContent">
         <div class="grid-album">
             
             <div class="polaroid">
                 <img src="IMG_0713.jpeg" alt="Mama">
-                <div class="caption">Mama harus terus sehat dan bahagia. Kami semua sayang mama dalam kondisi apapun.</div>
+                <div class="caption">Mama harus terus sehat dan bahagia. Kami semua sayang mama.</div>
             </div>
 
             <div class="polaroid">
@@ -134,25 +166,37 @@
 
             <div class="polaroid">
                 <img src="IMG_0710.jpeg" alt="Mama">
-                <div class="caption">Sehat selalu ya, Ma.... pokoknya harus terus ada sampai aku tuaaa</div>
+                <div class="caption">Sehat selalu ya, Ma... harus ada sampai aku tua!</div>
             </div>
 
             <div class="polaroid">
                 <img src="IMG_0712.jpeg" alt="Mama">
-                <div class="caption">Terima kasih maa.., mama selalu ada buatku meski kadangkala diriku membuat amarah tongkat dewa😔</div>
+                <div class="caption">Terima kasih Mama selalu sabar menghadapiku.</div>
             </div>
 
         </div>
     </div>
 
     <section class="personal-note">
-        "mama adalah degup jantung di dalam rumah, dan tanpa mama, tidak ada detak jantung." <br>
-        <strong>- I love you mom. kalau mama berdoa selalu namaku disebut, aku juga ma sellau menyebut mama dalam doa.</strong>
+        "Mama adalah degup jantung di dalam rumah, dan tanpa mama, tidak ada detak jantung." <br>
+        <strong>- I love you mom. Aku selalu menyebut namamu dalam doaku.</strong>
     </section>
 
     <footer>
         &copy; 2025 - Dibuat spesial untuk Hari Ibu
     </footer>
 
-</body>
+    <script>
+        function bukaKado() {
+            // Sembunyikan Overlay
+            const overlay = document.getElementById('overlay');
+            overlay.style.opacity = '0';
+            overlay.style.visibility = 'hidden';
 
+            // Tampilkan konten dengan animasi
+            const content = document.getElementById('albumContent');
+            content.classList.add('show-content');
+        }
+    </script>
+
+</body>
