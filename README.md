@@ -133,7 +133,7 @@
             </div>
 
             <div class="polaroid">
-                <img src="https://images.unsplash.com/photo-1554244933-d87676a10d89?q=80&w=500" alt="Mama">
+                <img src="IMG_0710.jpeg" alt="Mama">
                 <div class="caption">Sehat selalu ya, Ma...</div>
             </div>
 
