@@ -123,7 +123,7 @@
         <div class="grid-album">
             
             <div class="polaroid">
-                <img src="https://images.unsplash.com/photo-1594142461625-783360696328?q=80&w=500" alt="Mama">
+                <img src="IMG_0708.jpeg" alt="Mama">
                 <div class="caption">Mama yang paling sabar ❤️</div>
             </div>
 
