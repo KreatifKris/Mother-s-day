@@ -123,7 +123,7 @@
         <div class="grid-album">
             
             <div class="polaroid">
-                <img src="IMG_0708.jpeg" alt="Mama">
+                <img src="IMG_0713.jpeg" alt="Mama">
                 <div class="caption">Mama harus terus sehat dan bahagia. Kami semua sayang mama dalam kondisi apapun.</div>
             </div>
 
