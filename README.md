@@ -179,7 +179,7 @@
 
     <section class="personal-note">
         "Mama adalah degup jantung di dalam rumah, dan tanpa mama, tidak ada detak jantung." <br>
-        <strong>- I love you mom. Aku selalu menyebut namamu dalam doaku.</strong>
+        <strong>- I love you mom</strong>
     </section>
 
     <footer>
