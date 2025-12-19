@@ -161,7 +161,7 @@
 
             <div class="polaroid">
                 <img src="IMG_0709.jpeg" alt="Mama">
-                <div class="caption">Momen bahagia kita</div>
+                <div class="caption">Mama selalu ada buatku, sedangkan orang lain belum tentu ada buatku</div>
             </div>
 
             <div class="polaroid">
